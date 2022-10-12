@@ -1,6 +1,6 @@
 :root {
     --clr-primary-100: white;
-    --clr-primary-400: #F1592A;
+    --clr-primary-400: #f25626;
 
     --clr-neutral-100: white;
     --clr-neutral-900: black;
@@ -236,7 +236,7 @@ p {
 
 .logo {
     height: 3rem;
-    margin-bottom: var(--size-400);
+    margin-bottom: .5rem;
 }
 
 .nav-bg-image {
@@ -251,6 +251,7 @@ p {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .primary-header {
@@ -349,7 +350,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: clamp(var(--size-400), 4vw, 5rem);
+    gap: 3em;
 }
 
 .box-card {
@@ -365,6 +366,7 @@ p {
 .box-card img {
     height: 70%;
     width: 100%;
+    object-fit: cover;
 }
 
 .box-card p {
@@ -418,7 +420,7 @@ p {
     background-image: url(images/footer-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
 
 .foot-wrapper {
@@ -533,7 +535,7 @@ p {
 
 .fs-primary-heading {
     font-size: var(--fs-primary-heading);
-    line-height: 1.1;
+    line-height: .8;
 }
 
 .fs-secondary-heading {
@@ -543,7 +545,6 @@ p {
 .fs-400 {
     font-size: var(--fs-400);
 }
-
 
 .fs-500 {
     font-size: var(--fs-500);
@@ -571,6 +572,10 @@ p {
     padding-bottom: 22%;
 }
 
+.flow-top-400 {
+    padding-top: 2rem;
+}
+
 /*
 .padding-block-section2 {
     padding-top: 16.125%;
@@ -595,6 +600,7 @@ p {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .category-padding-block-header {
@@ -623,6 +629,7 @@ p {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .box-events-container {
@@ -639,9 +646,20 @@ p {
     max-width: 30rem;
     max-height: auto;
     margin-bottom: 1rem;
+    transition: transform .2s
 }
 
-.box-events img {
+.box-events:hover {
+    transform:scale(105%);
+}
 
+.box-events:active {
+    background-color: var(--clr-neutral-900);
+    border: 3.2px solid var(--clr-neutral-900);
+    box-shadow: 10px 10px var(--clr-primary-400), 20px 20px black;
+    transform: translateY(4px);
+  }
+
+.box-events img {
     height: 90%;
 }
